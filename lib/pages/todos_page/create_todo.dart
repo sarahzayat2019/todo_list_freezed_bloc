@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../blocs/todo_list_bloc/index.dart';
 
-
 class CreateTodo extends StatefulWidget {
   const CreateTodo({Key? key}) : super(key: key);
 
