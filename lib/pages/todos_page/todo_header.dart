@@ -13,7 +13,7 @@ class TodoHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
+        const Text(
           'TODO',
           style: TextStyle(fontSize: 40.0),
         ),
@@ -31,7 +31,7 @@ class TodoHeader extends StatelessWidget {
             builder: (context, state) {
               return Text(
                 '${state.activeTodoCount} items left',
-                style: TextStyle(fontSize: 20.0, color: Colors.redAccent),
+                style: const TextStyle(fontSize: 20.0, color: Colors.redAccent),
               );
             },
           ),

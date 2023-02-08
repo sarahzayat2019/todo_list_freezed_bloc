@@ -35,17 +35,17 @@ mixin _$SearchEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Search value) search,
+    required TResult Function(Search value) search,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Search value)? search,
+    TResult? Function(Search value)? search,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Search value)? search,
+    TResult Function(Search value)? search,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -89,19 +89,19 @@ class _$SearchEventCopyWithImpl<$Res, $Val extends SearchEvent>
 }
 
 /// @nodoc
-abstract class _$$_SearchCopyWith<$Res> implements $SearchEventCopyWith<$Res> {
-  factory _$$_SearchCopyWith(_$_Search value, $Res Function(_$_Search) then) =
-      __$$_SearchCopyWithImpl<$Res>;
+abstract class _$$SearchCopyWith<$Res> implements $SearchEventCopyWith<$Res> {
+  factory _$$SearchCopyWith(_$Search value, $Res Function(_$Search) then) =
+      __$$SearchCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String searchValue});
 }
 
 /// @nodoc
-class __$$_SearchCopyWithImpl<$Res>
-    extends _$SearchEventCopyWithImpl<$Res, _$_Search>
-    implements _$$_SearchCopyWith<$Res> {
-  __$$_SearchCopyWithImpl(_$_Search _value, $Res Function(_$_Search) _then)
+class __$$SearchCopyWithImpl<$Res>
+    extends _$SearchEventCopyWithImpl<$Res, _$Search>
+    implements _$$SearchCopyWith<$Res> {
+  __$$SearchCopyWithImpl(_$Search _value, $Res Function(_$Search) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -109,7 +109,7 @@ class __$$_SearchCopyWithImpl<$Res>
   $Res call({
     Object? searchValue = null,
   }) {
-    return _then(_$_Search(
+    return _then(_$Search(
       null == searchValue
           ? _value.searchValue
           : searchValue // ignore: cast_nullable_to_non_nullable
@@ -120,8 +120,8 @@ class __$$_SearchCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Search implements _Search {
-  const _$_Search(this.searchValue);
+class _$Search implements Search {
+  const _$Search(this.searchValue);
 
   @override
   final String searchValue;
@@ -135,7 +135,7 @@ class _$_Search implements _Search {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Search &&
+            other is _$Search &&
             (identical(other.searchValue, searchValue) ||
                 other.searchValue == searchValue));
   }
@@ -146,8 +146,8 @@ class _$_Search implements _Search {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SearchCopyWith<_$_Search> get copyWith =>
-      __$$_SearchCopyWithImpl<_$_Search>(this, _$identity);
+  _$$SearchCopyWith<_$Search> get copyWith =>
+      __$$SearchCopyWithImpl<_$Search>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -180,7 +180,7 @@ class _$_Search implements _Search {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Search value) search,
+    required TResult Function(Search value) search,
   }) {
     return search(this);
   }
@@ -188,7 +188,7 @@ class _$_Search implements _Search {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Search value)? search,
+    TResult? Function(Search value)? search,
   }) {
     return search?.call(this);
   }
@@ -196,7 +196,7 @@ class _$_Search implements _Search {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Search value)? search,
+    TResult Function(Search value)? search,
     required TResult orElse(),
   }) {
     if (search != null) {
@@ -206,13 +206,13 @@ class _$_Search implements _Search {
   }
 }
 
-abstract class _Search implements SearchEvent {
-  const factory _Search(final String searchValue) = _$_Search;
+abstract class Search implements SearchEvent {
+  const factory Search(final String searchValue) = _$Search;
 
   @override
   String get searchValue;
   @override
   @JsonKey(ignore: true)
-  _$$_SearchCopyWith<_$_Search> get copyWith =>
+  _$$SearchCopyWith<_$Search> get copyWith =>
       throw _privateConstructorUsedError;
 }

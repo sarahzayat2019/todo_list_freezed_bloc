@@ -3,18 +3,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../blocs/search_bloc/index.dart';
 import '../../blocs/todo_type_filter_bloc/index.dart';
 import '../../models/todo_model.dart';
-import '../../utils/debounce.dart';
 
 class SearchAndFilterTodo extends StatelessWidget {
-  SearchAndFilterTodo({Key? key}) : super(key: key);
-  final debounce = Debounce(milliseconds: 1000);
+  const SearchAndFilterTodo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         TextField(
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             labelText: 'Search todos...',
             border: InputBorder.none,
             filled: true,
@@ -22,13 +20,11 @@ class SearchAndFilterTodo extends StatelessWidget {
           ),
           onChanged: (String? newSearchTerm) {
             if (newSearchTerm != null) {
-              debounce.run(() {
-                context.read<SearchBloc>().add(SearchEvent.search(newSearchTerm));
-              });
+              context.read<SearchBloc>().add(SearchEvent.search(newSearchTerm));
             }
           },
         ),
-        SizedBox(height: 10.0),
+        const SizedBox(height: 10.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -44,7 +40,9 @@ class SearchAndFilterTodo extends StatelessWidget {
   Widget filterButton(BuildContext context, Filter filter) {
     return TextButton(
       onPressed: () {
-        context.read<TodoTypeFilterBloc>().add(TodoTypeFilterEvent.setFilterType(filter));
+        context
+            .read<TodoTypeFilterBloc>()
+            .add(TodoTypeFilterEvent.setFilterType(filter));
       },
       child: Text(
         filter == Filter.all

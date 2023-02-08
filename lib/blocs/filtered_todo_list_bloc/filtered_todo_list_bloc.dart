@@ -6,7 +6,7 @@ import 'filtered_todo_list_state.dart';
 
 class FilteredTodoListBloc
     extends Bloc<FilteredTodoListEvent, FilteredTodoListState> {
-  final initialTodoList;
+  List<Todo> initialTodoList;
 
   FilteredTodoListBloc(this.initialTodoList)
       : super(

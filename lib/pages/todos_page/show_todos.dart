@@ -51,7 +51,7 @@ class ShowTodos extends StatelessWidget {
         shrinkWrap: true,
         itemCount: todos.length,
         separatorBuilder: (BuildContext context, int index) {
-          return Divider(color: Colors.grey);
+          return const Divider(color: Colors.grey);
         },
         itemBuilder: (BuildContext context, int index) {
           return Dismissible(
@@ -69,16 +69,16 @@ class ShowTodos extends StatelessWidget {
                 barrierDismissible: false,
                 builder: (context) {
                   return AlertDialog(
-                    title: Text('Are you sure?'),
-                    content: Text('Do you really want to delete?'),
+                    title: const Text('Are you sure?'),
+                    content: const Text('Do you really want to delete?'),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.pop(context, false),
-                        child: Text('NO'),
+                        child: const Text('NO'),
                       ),
                       TextButton(
                         onPressed: () => Navigator.pop(context, true),
-                        child: Text('YES'),
+                        child: const Text('YES'),
                       ),
                     ],
                   );
@@ -98,7 +98,7 @@ class ShowTodos extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10.0),
       color: Colors.red,
       alignment: direction == 0 ? Alignment.centerLeft : Alignment.centerRight,
-      child: Icon(
+      child: const Icon(
         Icons.delete,
         size: 30.0,
         color: Colors.white,
@@ -146,7 +146,7 @@ class _TodoItemState extends State<TodoItem> {
             return StatefulBuilder(
               builder: (BuildContext context, StateSetter setState) {
                 return AlertDialog(
-                  title: Text('Edit Todo'),
+                  title: const Text('Edit Todo'),
                   content: TextField(
                     controller: textController,
                     autofocus: true,
@@ -157,7 +157,7 @@ class _TodoItemState extends State<TodoItem> {
                   actions: [
                     TextButton(
                       onPressed: () => Navigator.pop(context),
-                      child: Text('CANCEL'),
+                      child: const Text('CANCEL'),
                     ),
                     TextButton(
                       onPressed: () {
@@ -171,7 +171,7 @@ class _TodoItemState extends State<TodoItem> {
                           }
                         });
                       },
-                      child: Text('EDIT'),
+                      child: const Text('EDIT'),
                     ),
                   ],
                 );
